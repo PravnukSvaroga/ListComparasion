@@ -106,20 +106,19 @@ public class PerformanceCheck {
      * Вывод полученных результатов в виде таблицы
      */
     private static void print(){
-
-        // Print the list objects in tabular format.
-        System.out.println("-------------------------------------------------------------------");
-        System.out.printf("%10s %15s %15s %15s", "LIST TYPE   |", "ADD TIME", "GET TIME", "REMOVE TIME");
+        
+        System.out.println("---------------------------------------------------------------------------------");
+        System.out.printf("%10s %15s %15s %15s %5s %12s", "LIST TYPE   |", "ADD TIME", "GET TIME", "REMOVE TIME", "|",   "REPETITIONS");
         System.out.println();
-        System.out.println("-------------------------------------------------------------------");
+        System.out.println("---------------------------------------------------------------------------------");
 
-        System.out.format("%10s %15s %15s %15s", "ArrayList   |", addTimeArrayList(), getTimeArrayList(), removeTimeArrayList());
-
-        System.out.println();
-        System.out.format("%10s %15s %15s %15s", "LinkedList  |", addTimeLinkedList(), getTimeLinkedList(), removeTimeLinkedList());
+        System.out.format("%10s %15s %15s %15s %5s %12s", "ArrayList   |", addTimeArrayList(), getTimeArrayList(), removeTimeArrayList(), "|", repNumber);
 
         System.out.println();
+        System.out.format("%10s %15s %15s %15s %5s %12s", "LinkedList  |", addTimeLinkedList(), getTimeLinkedList(), removeTimeLinkedList(), "|", "");
 
-        System.out.println("-------------------------------------------------------------------");
+        System.out.println();
+
+        System.out.println("---------------------------------------------------------------------------------");
     }
 }
